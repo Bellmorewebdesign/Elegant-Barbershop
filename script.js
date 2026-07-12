@@ -21,7 +21,7 @@
     { file: "gallery/gallery-03.png", alt: "Kids' haircut at Elegant Barber Shop in Bellmore" },
     { file: "gallery/gallery-04.png", alt: "Sharp lineup and taper haircut" },
     { file: "gallery/gallery-05.png", alt: "Scissor cut with a natural, textured finish" },
-    { file: "gallery/gallery-06.png", alt: "Classic men's cut styled at the shop" },
+    { file: "gallery/gallery-06.png", alt: "Elegant Barber Shop business card with services, address and phone number" },
     { file: "gallery/gallery-07.png", alt: "Low fade haircut detail" },
     { file: "gallery/gallery-08.png", alt: "Hair design and detailed lineup" },
     { file: "gallery/gallery-09.png", alt: "Comfortable kids' haircut in progress" },
@@ -256,6 +256,26 @@
   }
 
   /* -----------------------------------------------------------------
+     Graceful fallback for any content image that may not be uploaded
+     yet. An <img data-fallback="other.png"> swaps to the fallback the
+     first time it fails to load, so the page never shows a broken image.
+  ------------------------------------------------------------------ */
+  function initImageFallbacks() {
+    document.querySelectorAll("img[data-fallback]").forEach(function (img) {
+      img.addEventListener("error", function handler() {
+        img.removeEventListener("error", handler);
+        var fb = img.getAttribute("data-fallback");
+        if (fb && img.src.indexOf(fb) === -1) img.src = fb;
+      });
+      // If it already failed before the listener attached, retrigger.
+      if (img.complete && img.naturalWidth === 0) {
+        var fb = img.getAttribute("data-fallback");
+        if (fb && img.src.indexOf(fb) === -1) img.src = fb;
+      }
+    });
+  }
+
+  /* -----------------------------------------------------------------
      Init
   ------------------------------------------------------------------ */
   document.addEventListener("DOMContentLoaded", function () {
@@ -263,5 +283,6 @@
     initNav();
     initReveal();
     initYear();
+    initImageFallbacks();
   });
 })();
