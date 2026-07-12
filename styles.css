@@ -118,6 +118,10 @@ h1, h2, h3 { font-family: var(--font-display); line-height: 1.1; color: var(--na
 .section__head { max-width: 640px; margin-bottom: 3rem; }
 .section__intro { color: var(--slate); font-size: 1.08rem; margin: 0; }
 .section__cta { text-align: center; margin-top: 3rem; }
+.offer-note { display: inline-flex; align-items: center; gap: 0.5rem; margin: 1.1rem 0 0;
+  background: var(--navy); color: #fff; font-weight: 700; font-size: 0.95rem;
+  padding: 0.5rem 1rem; border-radius: 999px; box-shadow: var(--shadow-sm); }
+.offer-note .ico { fill: #ffd166; }
 
 /* ---------- Info bar ---------- */
 .infobar { background: var(--navy); color: #eef2fb; font-size: 0.86rem; }
@@ -140,7 +144,7 @@ h1, h2, h3 { font-family: var(--font-display); line-height: 1.1; color: var(--na
 }
 .header__inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-block: 0.55rem; }
 .brand { display: inline-flex; align-items: center; }
-.brand__logo { height: 52px; width: auto; }
+.brand__logo { height: 74px; width: auto; }
 
 .nav { display: flex; align-items: center; }
 .nav__menu { list-style: none; display: flex; align-items: center; gap: 0.35rem; margin: 0; padding: 0; }
@@ -203,7 +207,7 @@ h1, h2, h3 { font-family: var(--font-display); line-height: 1.1; color: var(--na
   padding: 1.1rem 1.3rem; box-shadow: var(--shadow-md); border: 1px solid var(--line);
   width: fit-content; margin-bottom: -1.4rem; margin-left: auto; margin-right: 1.5rem;
 }
-.hero__logocard img { height: 58px; width: auto; }
+.hero__logocard img { height: 92px; width: auto; }
 .hero__photo {
   margin: 0; position: relative; z-index: 1; border-radius: var(--radius-lg);
   overflow: hidden; box-shadow: var(--shadow-lg); border: 6px solid #fff;
@@ -268,6 +272,9 @@ h1, h2, h3 { font-family: var(--font-display); line-height: 1.1; color: var(--na
 .family__point p { color: #b9c4e0; margin: 0; font-size: 0.95rem; }
 .family__media { margin: 0; border-radius: var(--radius-lg); overflow: hidden; border: 6px solid rgba(255,255,255,0.12); box-shadow: var(--shadow-lg); aspect-ratio: 5/6; }
 .family__media img { width: 100%; height: 100%; object-fit: cover; }
+/* Poster artwork (e.g. the kids-haircuts poster) shows in full, not cropped. */
+.family__media--poster { background: #fff; display: grid; place-items: center; }
+.family__media--poster img { object-fit: contain; }
 
 /* ---------- Gallery ---------- */
 .gallery-grid { display: grid; gap: 1rem; }
@@ -387,7 +394,7 @@ h1, h2, h3 { font-family: var(--font-display); line-height: 1.1; color: var(--na
 /* ---------- Footer ---------- */
 .site-footer { background: var(--navy-800); color: #c9d2e8; padding-top: clamp(3rem, 6vw, 4.5rem); }
 .footer__grid { display: grid; grid-template-columns: 1.4fr 0.8fr 1fr; gap: 2.5rem; padding-bottom: 2.5rem; }
-.footer__logo { height: 58px; width: auto; background: #fff; border-radius: 12px; padding: 8px 12px; }
+.footer__logo { height: 82px; width: auto; background: #fff; border-radius: 12px; padding: 8px 12px; }
 .footer__tag { margin: 1rem 0 1.2rem; max-width: 34ch; color: #aab6d6; font-size: 0.95rem; }
 .footer__social { display: flex; gap: 0.6rem; }
 .footer__social a { width: 42px; height: 42px; border-radius: 12px; display: grid; place-items: center;
