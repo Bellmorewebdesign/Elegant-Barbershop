@@ -105,7 +105,6 @@
   ------------------------------------------------------------------ */
   var lightbox = document.getElementById("lightbox");
   var lbImg = document.getElementById("lbImg");
-  var lbCaption = document.getElementById("lbCaption");
   var lbClose = document.getElementById("lbClose");
   var lbPrev = document.getElementById("lbPrev");
   var lbNext = document.getElementById("lbNext");
@@ -118,7 +117,6 @@
     var item = loadedItems[currentIndex];
     lbImg.src = item.src;
     lbImg.alt = item.alt;
-    lbCaption.textContent = item.alt;
     var multiple = loadedItems.length > 1;
     lbPrev.style.display = multiple ? "" : "none";
     lbNext.style.display = multiple ? "" : "none";
