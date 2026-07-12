@@ -200,6 +200,10 @@ h1, h2, h3 { font-family: var(--font-display); line-height: 1.1; color: var(--na
 .stars svg { width: 18px; height: 18px; fill: var(--gold); }
 .stars--sm svg { width: 15px; height: 15px; }
 
+/* Logo shown at the top of the hero on mobile (hidden on desktop, where
+   the logo card in the media collage handles it). */
+.hero__mark { display: none; }
+
 /* Hero media collage */
 .hero__media { position: relative; }
 .hero__logocard {
@@ -491,12 +495,21 @@ h1, h2, h3 { font-family: var(--font-display); line-height: 1.1; color: var(--na
    Responsive
    =================================================================== */
 @media (max-width: 1024px) {
+  /* Centered, logo-first hero on tablet/phone */
   .hero__grid { grid-template-columns: 1fr; }
-  .hero__media { max-width: 460px; margin-inline: auto; }
+  .hero__content { text-align: center; }
+  .hero__mark { display: block; height: 88px; width: auto; margin: 0 auto 1.25rem; }
+  .hero__lead { margin-left: auto; margin-right: auto; }
+  .hero__actions { justify-content: center; }
+  .hero__logocard { display: none; }
+  .hero__media { max-width: 420px; margin-inline: auto; }
+
+  /* Text before photo so the hero photo and About photo aren't back-to-back */
   .about__grid { grid-template-columns: 1fr; }
-  .about__media { max-width: 460px; }
+  .about__content { order: 1; }
+  .about__media { order: 2; max-width: 460px; margin-inline: auto; }
   .family__grid { grid-template-columns: 1fr; }
-  .family__media { max-width: 460px; }
+  .family__media { max-width: 460px; margin-inline: auto; }
   .visit__grid { grid-template-columns: 1fr; }
   .visit__map { position: static; }
   .reviews__rail { grid-template-columns: repeat(2, 1fr); }
