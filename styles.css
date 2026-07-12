@@ -200,18 +200,11 @@ h1, h2, h3 { font-family: var(--font-display); line-height: 1.1; color: var(--na
 .stars svg { width: 18px; height: 18px; fill: var(--gold); }
 .stars--sm svg { width: 15px; height: 15px; }
 
-/* Logo shown at the top of the hero on mobile (hidden on desktop, where
-   the logo card in the media collage handles it). */
-.hero__mark { display: none; }
+/* Transparent logo lockup sitting above the hero text (all viewports). */
+.hero__mark { display: block; height: 108px; width: auto; margin: 0 0 1.5rem; }
 
 /* Hero media collage */
 .hero__media { position: relative; }
-.hero__logocard {
-  position: relative; z-index: 2; background: #fff; border-radius: var(--radius);
-  padding: 1.1rem 1.3rem; box-shadow: var(--shadow-md); border: 1px solid var(--line);
-  width: fit-content; margin-bottom: -1.4rem; margin-left: auto; margin-right: 1.5rem;
-}
-.hero__logocard img { height: 92px; width: auto; }
 .hero__photo {
   margin: 0; position: relative; z-index: 1; border-radius: var(--radius-lg);
   overflow: hidden; box-shadow: var(--shadow-lg); border: 6px solid #fff;
@@ -498,10 +491,9 @@ h1, h2, h3 { font-family: var(--font-display); line-height: 1.1; color: var(--na
   /* Centered, logo-first hero on tablet/phone */
   .hero__grid { grid-template-columns: 1fr; }
   .hero__content { text-align: center; }
-  .hero__mark { display: block; height: 88px; width: auto; margin: 0 auto 1.25rem; }
+  .hero__mark { height: 92px; margin: 0 auto 1.25rem; }
   .hero__lead { margin-left: auto; margin-right: auto; }
   .hero__actions { justify-content: center; }
-  .hero__logocard { display: none; }
   .hero__media { max-width: 420px; margin-inline: auto; }
 
   /* Text before photo so the hero photo and About photo aren't back-to-back */
