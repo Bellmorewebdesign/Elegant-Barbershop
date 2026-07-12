@@ -86,7 +86,7 @@ recommendations.
 
 ## How to update business information
 
-Business details (address, phone, hours, and ratings) live directly
+Business details (address, phone, hours, ratings, and social profiles) live directly
 in the HTML. To change them:
 
 - **Phone number:** search `index.html` and `gallery.html` for
@@ -94,6 +94,8 @@ in the HTML. To change them:
 - **Address:** search for `312 Bedford Ave`.
 - **Hours:** edit the `<table class="hours">` blocks in the Visit sections.
 - **Ratings / review text:** edit the Reviews section in `index.html`.
+- **Social profiles:** Instagram links to `@Jacobsbarbershop`; Facebook links
+  to the shop's profile page. Keep both pages and their structured data in sync.
 - **Structured data:** update the `application/ld+json` block near the top of
   each HTML file so search engines stay in sync.
 
